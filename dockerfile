@@ -1,7 +1,7 @@
 #!/bin/bash
-FROM node:alpine
-RUN apk update
-RUN apk add nano
+FROM arm64v8/node:latest
+RUN apt-get update
+RUN apt-get install nano
 WORKDIR /app
 ENV PATH /app/node_modules/.bin:$PATH
 COPY package.json ./

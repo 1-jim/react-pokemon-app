@@ -1,11 +1,11 @@
 version: '3.7'
 services:
   pokemon:
-    image: mon-site:latest
+    image: pokemon-react:latest
     container_name: pokemon
     hostname: pokemon
     ports:
-      - 3001:3000
+      - 3033:3000
     networks:
       - network
 networks:
