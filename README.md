@@ -1,3 +1,13 @@
+# Multi Arch Images
+docker buildx create --name swbuilder
+docker buildx use swbuilder
+docker buildx inspect --bootstrap
+
+docker buildx build --platform linux/amd64,linux/arm64,linux/arm/v7 -t ultrajcr/starwars-react --push .
+
+##verify
+docker buildx imagetools inspect ultrajcr/starwars-react:latest
+
 # Getting Started with Create React App and Fluent UI
 
 This is a [Create React App](https://github.com/facebook/create-react-app) based repo that comes with Fluent UI pre-installed!
