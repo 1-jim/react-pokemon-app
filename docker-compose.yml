@@ -1,7 +1,7 @@
 version: '3.7'
 services:
   pokemon:
-    image: pokemon-react:latest
+    image: ultrajcr/pokemon-react:latest
     container_name: pokemon
     hostname: pokemon
     ports:

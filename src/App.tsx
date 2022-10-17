@@ -50,7 +50,7 @@ export const App: React.FunctionComponent = () => {
               src="https://avatars.githubusercontent.com/u/69900306?v=4"
               alt="it's Jim"
             />
-            <small>Copyright &copy; Jimmy Jimster</small>
+            <small>Jimmy Jimster</small>
           </div>
         </footer>
       </div>

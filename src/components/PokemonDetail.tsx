@@ -40,23 +40,6 @@ function PokemonDetail(props: IPokemonDetailProps): JSX.Element {
         />
         <Card.Title className="card-meta mb-2">{props.pokemon.name}</Card.Title>
         <Card.Body>
-          <div className="row">
-            {props.pokemon.types.map((typ) => (
-              <div className="">
-                <strong>{"Type: " + typ.type.name.toUpperCase()}</strong>
-              </div>
-            ))}
-          </div>
-        </Card.Body>
-        <Card.Footer>
-          <div className="media">
-          <img className="mr-3 rounded-circle" width={"50px"} src="https://avatars.githubusercontent.com/u/69900306?v=4" alt="it's Jim"/>
-          <div className="media-body">
-            <h6 className="my-0 text-white d-block">James Clunies-Ross</h6>
-            <small>Director of UI/UX</small>
-          </div>
-
-          </div>
           <Button
             type="button"
             className="btn btn-primary"
@@ -67,6 +50,13 @@ function PokemonDetail(props: IPokemonDetailProps): JSX.Element {
           </Button>
           <Collapse in={toggle} className="card card-background-stats">
             <div className="row">
+              <div className="row">
+                {props.pokemon.types.map((typ) => (
+                  <div className="">
+                    <strong>{"Type: " + typ.type.name.toUpperCase()}</strong>
+                  </div>
+                ))}
+              </div>
               {props.pokemon?.stats.map((stat) => (
                 <>
                   <strong>{stat.stat.name + ": " + stat.base_stat}</strong>
@@ -75,7 +65,8 @@ function PokemonDetail(props: IPokemonDetailProps): JSX.Element {
               ))}
             </div>
           </Collapse>
-        </Card.Footer>
+        </Card.Body>
+        <Card.Footer></Card.Footer>
       </Card>
       {/* <Card
         className="Carddeck"

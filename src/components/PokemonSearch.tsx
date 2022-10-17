@@ -1,5 +1,6 @@
 import { useState } from "react";
 import pokapiGetter from "../services/pokapiGetter";
+import Logo from "../media/logo.png";
 import {
   ISearchBoxStyles,
   IStackTokens,
@@ -88,6 +89,9 @@ function PokemonSearch(): JSX.Element {
           </Button>
         </Stack>
       </form>
+      {responseSvc === undefined ? (
+        <img src={Logo} className="logo-image" alt="Pokemon" />
+      ) : null}
       {isLoadingSvc ? (
         <MyLoadingSpinner divHeight={300} loadingText="Querying Pokedex" />
       ) : null}
