@@ -2,6 +2,8 @@ import React from "react";
 import { Stack, Link, IStackTokens, IStackStyles } from "@fluentui/react";
 import "./App.css";
 import PokemonSearch from "./components/PokemonSearch";
+import { initializeIcons } from '@fluentui/font-icons-mdl2';
+initializeIcons();
 
 const stackTokens: IStackTokens = { childrenGap: 15 };
 const stackStyles: Partial<IStackStyles> = {
